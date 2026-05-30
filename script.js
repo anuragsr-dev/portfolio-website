@@ -61,3 +61,53 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// ================================
+// ROTATING ROLES — HERO
+// ================================
+const roles = [
+  "Full Stack Developer",
+  "Web Developer",
+  "DevOps Learner",
+  "GenAI Enthusiast"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const roleText = document.getElementById('roleText');
+
+function typeRole() {
+  const currentRole = roles[roleIndex];
+
+  if (isDeleting) {
+    // Delete one character
+    roleText.textContent = currentRole.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    // Type one character
+    roleText.textContent = currentRole.substring(0, charIndex + 1);
+    charIndex++;
+  }
+
+  // Typing speed
+  let speed = isDeleting ? 60 : 100;
+
+  // Word complete — pause then delete
+  if (!isDeleting && charIndex === currentRole.length) {
+    speed = 1800; // Pause at end
+    isDeleting = true;
+  }
+
+  // Word deleted — move to next
+  if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    speed = 400; // Pause before next word
+  }
+
+  setTimeout(typeRole, speed);
+}
+
+// Start typing
+typeRole();
