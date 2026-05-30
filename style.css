@@ -1,0 +1,176 @@
+/* ================================
+   CSS VARIABLES — COLOR SYSTEM
+   ================================ */
+:root {
+  /* Colors */
+  --bg-primary: #0A0F1E;
+  --bg-secondary: #111827;
+  --bg-card: #1a2235;
+  --primary: #6366F1;
+  --primary-dark: #4f46e5;
+  --accent: #22D3EE;
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --border: rgba(99, 102, 241, 0.2);
+
+  /* Typography */
+  --font: 'Poppins', sans-serif;
+
+  /* Spacing */
+  --section-padding: 100px 0;
+
+  /* Border Radius */
+  --radius: 12px;
+  --radius-lg: 20px;
+
+  /* Transitions */
+  --transition: all 0.3s ease;
+
+  /* Shadow */
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-primary: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+/* ================================
+   RESET + BASE STYLES
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ================================
+   SCROLLBAR STYLING
+   ================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* ================================
+   SELECTION COLOR
+   ================================ */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================================
+   REUSABLE COMPONENTS
+   ================================ */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Padding */
+.section {
+  padding: var(--section-padding);
+}
+
+/* Section Header — Har section mein use hoga */
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-tag {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: transparent;
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid var(--primary);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font);
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+}
+
