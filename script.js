@@ -2,9 +2,10 @@
 // AOS INITIALIZE — Scroll Animations
 // ================================
 AOS.init({
-  duration: 800,
+  duration: 600,
   once: true,
-  offset: 100
+  offset: 80,
+  easing: 'ease-out-back'
 });
 
 console.log("Portfolio JS loaded ✅");
