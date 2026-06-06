@@ -112,3 +112,36 @@ function typeRole() {
 
 // Start typing
 typeRole();
+
+// ================================
+// SLIDE PANEL
+// ================================
+const slidePanel = document.getElementById('slidePanel');
+const panelOverlay = document.getElementById('panelOverlay');
+
+function openPanel(type) {
+  // Sab panels hide karo
+  document.querySelectorAll('.panel-content').forEach(p => {
+    p.style.display = 'none';
+  });
+
+  // Selected panel show karo
+  const target = document.getElementById('panel-' + type);
+  if (target) target.style.display = 'block';
+
+  // Panel + overlay open karo
+  slidePanel.classList.add('active');
+  panelOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePanel() {
+  slidePanel.classList.remove('active');
+  panelOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// ESC key se close
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closePanel();
+});
