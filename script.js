@@ -145,3 +145,120 @@ function closePanel() {
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closePanel();
 });
+
+// ================================
+// PASSWORD MODAL
+// ================================
+const passwordModal = document.getElementById('passwordModal');
+const passwordModalOverlay = document.getElementById('passwordModalOverlay');
+const aiSlidePanel = document.getElementById('aiSlidePanel');
+const aiPanelOverlay = document.getElementById('aiPanelOverlay');
+const modalError = document.getElementById('modalError');
+const accessCodeInput = document.getElementById('accessCodeInput');
+
+// Backend URL — Deploy hone ke baad replace karna
+const BACKEND_URL = "http://localhost:3000";
+
+function openPasswordModal() {
+  passwordModal.classList.add('active');
+  passwordModalOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  accessCodeInput.focus();
+  modalError.textContent = '';
+  accessCodeInput.value = '';
+}
+
+function closePasswordModal() {
+  passwordModal.classList.remove('active');
+  passwordModalOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function openAiPanel() {
+  aiSlidePanel.classList.add('active');
+  aiPanelOverlay.classList.add('active');
+}
+
+function closeAiPanel() {
+  aiSlidePanel.classList.remove('active');
+  aiPanelOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Enter key support
+function handleEnterKey(event) {
+  if (event.key === 'Enter') verifyPassword();
+}
+
+// Password Verify — Backend API call
+async function verifyPassword() {
+  const password = accessCodeInput.value.trim();
+
+  if (!password) {
+    modalError.textContent = 'Please enter access code.';
+    return;
+  }
+
+  // Button loading state
+  const btn = document.querySelector('.modal-unlock-btn');
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
+  btn.disabled = true;
+  modalError.textContent = '';
+
+  try {
+    const response = await fetch(`${BACKEND_URL}/unlock-service`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password })
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      // Password correct
+      closePasswordModal();
+
+      // Loading spinner
+      aiPanelContent.innerHTML = `
+  <div style="
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:200px;
+  ">
+    <i class="fas fa-spinner fa-spin"
+       style="
+         color:var(--primary);
+         font-size:2rem;
+       ">
+    </i>
+  </div>
+`;
+      aiPanelContent.innerHTML = data.content;
+      setTimeout(() => {
+        openAiPanel();
+        document.body.style.overflow = 'hidden';
+      }, 300);
+    } else {
+      // Wrong password
+      modalError.textContent = 'Invalid access code. Please try again.';
+      accessCodeInput.value = '';
+      accessCodeInput.focus();
+    }
+
+  } catch (error) {
+    modalError.textContent = 'Connection error. Please try again.';
+  }
+
+  // Button reset
+  btn.innerHTML = '<span>Unlock Access</span><i class="fas fa-arrow-right"></i>';
+  btn.disabled = false;
+}
+
+// ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closePasswordModal();
+    closeAiPanel();
+  }
+});

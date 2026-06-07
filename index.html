@@ -866,6 +866,197 @@
     </div>
     <!-- builds-grid end -->
 
+    <!-- ================================
+     AI SECTION DIVIDER
+     ================================ -->
+<div class="ai-divider" data-aos="fade-up">
+  <div class="ai-divider-line"></div>
+  <div class="ai-divider-content">
+    <span class="ai-divider-tag">
+      <i class="fas fa-microchip"></i> AI Powered
+    </span>
+    <h3 class="ai-divider-heading">
+      Where Development Meets <span>Intelligence</span>
+    </h3>
+    <p class="ai-divider-sub">
+      Interactive AI-powered concepts designed with modern workflows, 
+      automation, and scalable architecture in mind.
+    </p>
+  </div>
+  <div class="ai-divider-line"></div>
+</div>
+
+<!-- ================================
+     AI CARD
+     ================================ -->
+<div class="ai-card" data-aos="fade-up" data-aos-delay="100">
+
+  <!-- Card Top -->
+  <div class="ai-card-top">
+    <span class="ai-tag">
+      <i class="fas fa-robot"></i> AI-Powered
+    </span>
+    <span class="ai-badge">
+      <span class="ai-pulse"></span>
+      In Development
+    </span>
+  </div>
+
+  <!-- Card Content -->
+  <div class="ai-card-content">
+
+    <!-- Left -->
+    <div class="ai-card-left">
+      <h3 class="ai-card-title">
+        AI-Powered Portfolio Experience
+      </h3>
+      <p class="ai-card-hook">
+        "What if your portfolio could speak for itself?"
+      </p>
+      <p class="ai-card-support">
+        Answer questions, explain projects, and engage visitors 
+        — even when you're offline.
+      </p>
+
+      <ul class="ai-capabilities">
+        <li>
+          <i class="fas fa-check-circle"></i>
+          AI-powered visitor interaction
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          Explains projects automatically
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          24/7 intelligent assistant
+        </li>
+        <li>
+          <i class="fas fa-check-circle"></i>
+          Scalable backend-ready architecture
+        </li>
+      </ul>
+
+      <button class="ai-unlock-btn" onclick="openPasswordModal()">
+        <span>Unlock Architecture</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+      <!-- Contact Block -->
+<div class="ai-contact-block">
+  <p class="ai-contact-text">
+    Interested in this AI-powered architecture or looking for 
+    similar custom solutions? Feel free to reach out for 
+    discussions, collaborations, or access to the complete 
+    architecture and access code.
+  </p>
+  <a href="https://wa.me/639300912130" 
+     target="_blank" 
+     class="ai-whatsapp-btn">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat on WhatsApp</span>
+  </a>
+</div>
+    </div>
+
+    <!-- Right — Visual -->
+    <div class="ai-card-right">
+      <div class="ai-visual">
+        <div class="ai-circle ai-circle-1"></div>
+        <div class="ai-circle ai-circle-2"></div>
+        <div class="ai-circle ai-circle-3"></div>
+        <div class="ai-icon-center">
+          <i class="fas fa-brain"></i>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ================================
+     PASSWORD MODAL
+     ================================ -->
+<div class="password-modal-overlay" 
+     id="passwordModalOverlay" 
+     onclick="closePasswordModal()">
+</div>
+
+<div class="password-modal" id="passwordModal">
+
+  <!-- Modal Header -->
+  <div class="modal-header">
+    <div class="modal-lock-icon">
+      <i class="fas fa-lock"></i>
+    </div>
+    <h3>Protected Content</h3>
+    <p>This implementation details are private. 
+       Enter access code to unlock.</p>
+  </div>
+
+  <!-- Blurred Preview -->
+  <div class="modal-blur-preview">
+    <div class="blur-lines">
+      <span>AI Portfolio Assistant</span>
+      <span>Core Capabilities</span>
+      <span>Architecture Overview</span>
+      <span>Implementation Details</span>
+      <span>Future Upgrade System</span>
+      <span>Security & Backend</span>
+    </div>
+    <div class="blur-overlay">
+      <i class="fas fa-lock"></i>
+      <p>Enter access code to unlock</p>
+    </div>
+  </div>
+
+  <!-- Password Input -->
+  <div class="modal-input-area">
+    <div class="password-input-wrapper">
+      <i class="fas fa-key"></i>
+      <input 
+        type="password" 
+        id="accessCodeInput"
+        placeholder="Enter access code..."
+        onkeypress="handleEnterKey(event)"
+      />
+    </div>
+    <p class="modal-error" id="modalError"></p>
+    <button class="modal-unlock-btn" onclick="verifyPassword()">
+      <span>Unlock Access</span>
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- Close -->
+  <button class="modal-close" onclick="closePasswordModal()">
+    <i class="fas fa-times"></i>
+  </button>
+
+</div>
+
+<!-- ================================
+     AI SLIDE PANEL
+     ================================ -->
+<div class="ai-panel-overlay" 
+     id="aiPanelOverlay" 
+     onclick="closeAiPanel()">
+</div>
+
+<div class="ai-slide-panel" id="aiSlidePanel">
+
+  <!-- Close Button -->
+  <button class="panel-close" onclick="closeAiPanel()">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <!-- Panel Content -->
+  <div class="panel-content" id="aiPanelContent">
+
+
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
