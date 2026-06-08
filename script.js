@@ -262,3 +262,45 @@ document.addEventListener('keydown', (e) => {
     closeAiPanel();
   }
 });
+
+// ================================
+// VIRTUAL NUMBER PANEL
+// ================================
+const vnSlidePanel = document.getElementById('vnSlidePanel');
+const vnPanelOverlay = document.getElementById('vnPanelOverlay');
+
+function openVNPanel() {
+  vnSlidePanel.classList.add('active');
+  vnPanelOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVNPanel() {
+  vnSlidePanel.classList.remove('active');
+  vnPanelOverlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// View More Regions Toggle
+function toggleMoreRegions() {
+  const moreRegions = document.getElementById('moreRegions');
+  const viewMoreIcon = document.getElementById('viewMoreIcon');
+  const viewMoreBtn = document.getElementById('viewMoreBtn');
+
+  if (moreRegions.classList.contains('visible')) {
+    moreRegions.classList.remove('visible');
+    viewMoreIcon.style.transform = 'rotate(0deg)';
+    viewMoreBtn.querySelector('span').textContent = 'View More Regions';
+  } else {
+    moreRegions.classList.add('visible');
+    viewMoreIcon.style.transform = 'rotate(180deg)';
+    viewMoreBtn.querySelector('span').textContent = 'Show Less';
+  }
+}
+
+// ESC key — VN panel
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeVNPanel();
+  }
+});

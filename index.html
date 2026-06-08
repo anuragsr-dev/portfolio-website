@@ -53,6 +53,7 @@
   <li><a href="#about" class="nav-link">About</a></li>
   <li><a href="#skills" class="nav-link">Skills</a></li>
   <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+  <li><a href="#services" class="nav-link">Services</a></li>
   <li><a href="#contact" class="nav-link">Contact</a></li>
 </ul>
     </ul>
@@ -1122,6 +1123,80 @@
 </div>
 
 <!-- ================================
+     SERVICES SECTION HEADING
+     ================================ -->
+<div id="services" 
+     class="services-heading-block" data-aos="fade-up">
+  <span class="section-tag">// services</span>
+  <h2 class="section-title">
+    Private & <span>Global Solutions</span>
+  </h2>
+  <div class="section-line"></div>
+  <p class="section-desc">
+    Flexible digital services designed for privacy, global access, and modern online communication.
+  </p>
+</div>
+
+<!-- Card 3 — Virtual Number Services -->
+<div class="build-card vn-card" 
+     data-aos="fade-up" data-aos-delay="300">
+
+  <div class="build-card-top">
+    <div class="build-icon vn-icon">
+      <i class="fas fa-sim-card"></i>
+    </div>
+    <div class="build-badge badge-available">
+      <span class="vn-pulse"></span>
+      Available Now
+    </div>
+  </div>
+
+  <div class="vn-top-tag">
+    <span>PRIVATE</span>
+    <span class="vn-dot">•</span>
+    <span>FLEXIBLE</span>
+    <span class="vn-dot">•</span>
+    <span>GLOBAL</span>
+  </div>
+
+  <h3 class="build-title">Virtual Number Services</h3>
+
+  <p class="build-desc">
+    Separate your personal identity from online communication 
+    — professionally and flexibly. Access virtual numbers for 
+    WhatsApp, Telegram, Instagram, and more across 70+ regions.
+  </p>
+
+  <ul class="build-highlights">
+    <li><i class="fas fa-check-circle"></i> 70+ regions available globally</li>
+    <li><i class="fas fa-check-circle"></i> Works with WhatsApp, Telegram & more</li>
+    <li><i class="fas fa-check-circle"></i> Keep personal number private</li>
+    <li><i class="fas fa-check-circle"></i> Flexible & professional communication</li>
+  </ul>
+
+  <div class="build-tags">
+    <span>WhatsApp</span>
+    <span>Telegram</span>
+    <span>Instagram</span>
+    <span>Global</span>
+  </div>
+
+  <!-- Limited availability note -->
+  <div class="vn-note">
+    <i class="fas fa-info-circle"></i>
+    <p>Currently available on a limited basis. A dedicated 
+       standalone platform is planned for the future — focused 
+       on modern digital tools and AI-assisted workflows.</p>
+  </div>
+
+  <button class="build-btn vn-btn" onclick="openVNPanel()">
+    <span>Explore Regions</span>
+    <i class="fas fa-arrow-right"></i>
+  </button>
+
+</div>
+
+<!-- ================================
      PASSWORD MODAL
      ================================ -->
 <div class="password-modal-overlay" 
@@ -1392,6 +1467,551 @@
 
 </div>
 <!-- slide-panel end -->
+
+<!-- ================================
+     SERVICES NOTICE
+     ================================ -->
+<div class="services-notice" data-aos="fade-up">
+  <div class="notice-inner">
+    <div class="notice-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="notice-content">
+      <span class="notice-tag">Portfolio Notice</span>
+      <h4 class="notice-heading">
+        Some Advanced Features Are Not Public...
+      </h4>
+      <p class="notice-text">
+        This public portfolio showcases selected experiences in a simplified format.  
+        More advanced systems, workflows, and private implementations are available through direct communication.
+      </p>
+    </div>
+    <div class="notice-shimmer"></div>
+  </div>
+</div>
+
+<!-- ================================
+     VIRTUAL NUMBER PANEL
+     ================================ -->
+<div class="panel-overlay" id="vnPanelOverlay" 
+     onclick="closeVNPanel()"></div>
+
+<div class="slide-panel" id="vnSlidePanel">
+
+  <button class="panel-close" onclick="closeVNPanel()">
+    <i class="fas fa-times"></i>
+  </button>
+
+  <div class="panel-content">
+
+    <!-- Header -->
+    <div class="panel-header">
+      <div class="panel-icon vn-panel-icon">
+        <i class="fas fa-sim-card"></i>
+      </div>
+      <div>
+        <span class="panel-tag">PRIVATE • FLEXIBLE • GLOBAL</span>
+        <h3 class="panel-title">Available Regions</h3>
+      </div>
+    </div>
+
+    <!-- Badge -->
+    <div class="vn-regions-badge">
+      <span class="vn-pulse"></span>
+      70+ Regions Available
+    </div>
+
+    <div class="panel-body">
+
+      <!-- Description -->
+      <div class="panel-block">
+        <p class="panel-desc">
+          Access virtual numbers across 70+ countries for platforms 
+          like WhatsApp, Telegram, Instagram, and more — keeping your 
+          personal number private and communication professional.
+        </p>
+      </div>
+
+      <!-- Featured Regions -->
+<div class="regions-grid" id="featuredRegions">
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/us.png" alt="US">
+    <div class="region-info">
+      <span class="region-name">United States</span>
+      <span class="region-code">+1</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/gb.png" alt="GB">
+    <div class="region-info">
+      <span class="region-name">United Kingdom</span>
+      <span class="region-code">+44</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/ca.png" alt="CA">
+    <div class="region-info">
+      <span class="region-name">Canada</span>
+      <span class="region-code">+1</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/au.png" alt="AU">
+    <div class="region-info">
+      <span class="region-name">Australia</span>
+      <span class="region-code">+61</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/jp.png" alt="JP">
+    <div class="region-info">
+      <span class="region-name">Japan</span>
+      <span class="region-code">+81</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/hk.png" alt="HK">
+    <div class="region-info">
+      <span class="region-name">Hong Kong</span>
+      <span class="region-code">+852</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/tr.png" alt="TR">
+    <div class="region-info">
+      <span class="region-name">Turkey</span>
+      <span class="region-code">+90</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/br.png" alt="BR">
+    <div class="region-info">
+      <span class="region-name">Brazil</span>
+      <span class="region-code">+55</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/ae.png" alt="AE">
+    <div class="region-info">
+      <span class="region-name">UAE</span>
+      <span class="region-code">+971</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/my.png" alt="MY">
+    <div class="region-info">
+      <span class="region-name">Malaysia</span>
+      <span class="region-code">+60</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/za.png" alt="ZA">
+    <div class="region-info">
+      <span class="region-name">South Africa</span>
+      <span class="region-code">+27</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/ph.png" alt="PH">
+    <div class="region-info">
+      <span class="region-name">Philippines</span>
+      <span class="region-code">+63</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/mx.png" alt="MX">
+    <div class="region-info">
+      <span class="region-name">Mexico</span>
+      <span class="region-code">+52</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/th.png" alt="TH">
+    <div class="region-info">
+      <span class="region-name">Thailand</span>
+      <span class="region-code">+66</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+  <div class="region-item">
+    <img class="region-flag" src="https://flagcdn.com/w40/id.png" alt="ID">
+    <div class="region-info">
+      <span class="region-name">Indonesia</span>
+      <span class="region-code">+62</span>
+    </div>
+    <span class="region-status available">Available</span>
+  </div>
+
+</div>
+
+<!-- View More Button -->
+<button class="view-more-btn" id="viewMoreBtn"
+        onclick="toggleMoreRegions()">
+  <i class="fas fa-globe"></i>
+  <span>View More Regions</span>
+  <i class="fas fa-chevron-down" id="viewMoreIcon"></i>
+</button>
+
+<!-- More Regions -->
+<div class="more-regions" id="moreRegions">
+  <div class="regions-grid">
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/co.png" alt="CO">
+      <div class="region-info">
+        <span class="region-name">Colombia</span>
+        <span class="region-code">+57</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/nz.png" alt="NZ">
+      <div class="region-info">
+        <span class="region-name">New Zealand</span>
+        <span class="region-code">+64</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/cl.png" alt="CL">
+      <div class="region-info">
+        <span class="region-name">Chile</span>
+        <span class="region-code">+56</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ma.png" alt="MA">
+      <div class="region-info">
+        <span class="region-name">Morocco</span>
+        <span class="region-code">+212</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ke.png" alt="KE">
+      <div class="region-info">
+        <span class="region-name">Kenya</span>
+        <span class="region-code">+254</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ng.png" alt="NG">
+      <div class="region-info">
+        <span class="region-name">Nigeria</span>
+        <span class="region-code">+234</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ar.png" alt="AR">
+      <div class="region-info">
+        <span class="region-name">Argentina</span>
+        <span class="region-code">+54</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/eg.png" alt="EG">
+      <div class="region-info">
+        <span class="region-name">Egypt</span>
+        <span class="region-code">+20</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/pe.png" alt="PE">
+      <div class="region-info">
+        <span class="region-name">Peru</span>
+        <span class="region-code">+51</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/bh.png" alt="BH">
+      <div class="region-info">
+        <span class="region-name">Bahrain</span>
+        <span class="region-code">+973</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/kz.png" alt="KZ">
+      <div class="region-info">
+        <span class="region-name">Kazakhstan</span>
+        <span class="region-code">+7</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/jm.png" alt="JM">
+      <div class="region-info">
+        <span class="region-name">Jamaica</span>
+        <span class="region-code">+1-876</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/np.png" alt="NP">
+      <div class="region-info">
+        <span class="region-name">Nepal</span>
+        <span class="region-code">+977</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/tz.png" alt="TZ">
+      <div class="region-info">
+        <span class="region-name">Tanzania</span>
+        <span class="region-code">+255</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/mn.png" alt="MN">
+      <div class="region-info">
+        <span class="region-name">Mongolia</span>
+        <span class="region-code">+976</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/fj.png" alt="FJ">
+      <div class="region-info">
+        <span class="region-name">Fiji</span>
+        <span class="region-code">+679</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/dz.png" alt="DZ">
+      <div class="region-info">
+        <span class="region-name">Algeria</span>
+        <span class="region-code">+213</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/gt.png" alt="GT">
+      <div class="region-info">
+        <span class="region-name">Guatemala</span>
+        <span class="region-code">+502</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/rw.png" alt="RW">
+      <div class="region-info">
+        <span class="region-name">Rwanda</span>
+        <span class="region-code">+250</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/bn.png" alt="BN">
+      <div class="region-info">
+        <span class="region-name">Brunei</span>
+        <span class="region-code">+673</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/cm.png" alt="CM">
+      <div class="region-info">
+        <span class="region-name">Cameroon</span>
+        <span class="region-code">+237</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/cd.png" alt="CD">
+      <div class="region-info">
+        <span class="region-name">DR Congo</span>
+        <span class="region-code">+243</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ml.png" alt="ML">
+      <div class="region-info">
+        <span class="region-name">Mali</span>
+        <span class="region-code">+223</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/td.png" alt="TD">
+      <div class="region-info">
+        <span class="region-name">Chad</span>
+        <span class="region-code">+235</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/zw.png" alt="ZW">
+      <div class="region-info">
+        <span class="region-name">Zimbabwe</span>
+        <span class="region-code">+263</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/mw.png" alt="MW">
+      <div class="region-info">
+        <span class="region-name">Malawi</span>
+        <span class="region-code">+265</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/mg.png" alt="MG">
+      <div class="region-info">
+        <span class="region-name">Madagascar</span>
+        <span class="region-code">+261</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/tt.png" alt="TT">
+      <div class="region-info">
+        <span class="region-name">Trinidad & Tobago</span>
+        <span class="region-code">+1-868</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/bz.png" alt="BZ">
+      <div class="region-info">
+        <span class="region-name">Belize</span>
+        <span class="region-code">+501</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/na.png" alt="NA">
+      <div class="region-info">
+        <span class="region-name">Namibia</span>
+        <span class="region-code">+264</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/ec.png" alt="EC">
+      <div class="region-info">
+        <span class="region-name">Ecuador</span>
+        <span class="region-code">+593</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+    <div class="region-item">
+      <img class="region-flag" src="https://flagcdn.com/w40/mz.png" alt="MZ">
+      <div class="region-info">
+        <span class="region-name">Mozambique</span>
+        <span class="region-code">+258</span>
+      </div>
+      <span class="region-status available">Available</span>
+    </div>
+
+  </div>
+
+  <p class="regions-update-note">
+    <i class="fas fa-sync-alt"></i>
+    Additional regions are updated regularly.
+  </p>
+</div>
+
+      <!-- Contact Section -->
+      <div class="panel-block vn-contact-block">
+        <h4><i class="fas fa-comments"></i> Direct Communication Channels</h4>
+        <p class="vn-contact-desc">
+          Interested in using this service or need more information? 
+          Feel free to reach out directly for availability, supported 
+          platforms, setup details, or communication guidance.
+        </p>
+        <p class="vn-contact-note">
+          <i class="fas fa-flask"></i>
+          You can also test and experience these communication 
+          setups personally before using the service.
+        </p>
+        <div class="vn-contact-btns">
+          <a href="https://wa.me/639300912130" 
+             target="_blank" 
+             class="vn-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp — Primary</span>
+          </a>
+          <a href="https://wa.me/254774647971" 
+             target="_blank" 
+             class="vn-whatsapp-btn vn-whatsapp-alt">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp — Secondary</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
