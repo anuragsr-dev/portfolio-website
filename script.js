@@ -304,3 +304,66 @@ document.addEventListener('keydown', (e) => {
     closeVNPanel();
   }
 });
+
+// ================================
+// EMAILJS SETUP
+// ================================
+// EmailJS CDN — index.html ke head mein add karo:
+// <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+// <script>emailjs.init("YOUR_PUBLIC_KEY")</script>
+
+emailjs.init("OGHzzx19Oyd5m8z1W");
+
+async function sendMessage() {
+  const name = document.getElementById('contactName').value.trim();
+  const email = 'No email provided';
+  const message = document.getElementById('contactMessage').value.trim();
+  const feedback = document.getElementById('formFeedback');
+  const btnText = document.getElementById('sendBtnText');
+  const btnIcon = document.getElementById('sendBtnIcon');
+
+  // Validation
+  if (!name) {
+    feedback.textContent = 'Please enter your name.';
+    feedback.className = 'form-feedback error';
+    return;
+  }
+
+  if (!message) {
+    feedback.textContent = 'Please write a message.';
+    feedback.className = 'form-feedback error';
+    return;
+  }
+
+  // Loading state
+  btnText.textContent = 'Sending...';
+  btnIcon.className = 'fas fa-spinner fa-spin';
+  feedback.textContent = '';
+
+  try {
+    await emailjs.send(
+      'service_bqepjga',    // EmailJS service ID
+      'template_9zff3pv',   // EmailJS template ID
+      {
+        name: name,
+        email: email,
+        message: message,
+        to_email: 'anuragsrivastava.tech@gmail.com'
+      }
+    );
+
+    // Success
+    feedback.textContent = '✅ Message sent! I\'ll get back to you soon.';
+    feedback.className = 'form-feedback success';
+    document.getElementById('contactName').value = '';
+    document.getElementById('contactMessage').value = '';
+
+  } catch (error) {
+    feedback.textContent = '❌ Something went wrong. Try again or reach out directly.';
+    feedback.className = 'form-feedback error';
+  }
+
+  // Reset button
+  btnText.textContent = 'Send Message';
+  btnIcon.className = 'fas fa-paper-plane';
+}

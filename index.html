@@ -32,6 +32,10 @@
   }
 </style>
 
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init("YOUR_PUBLIC_KEY")</script>
+
 </head>
 
 <body>
@@ -2013,6 +2017,177 @@
   </div>
 </div>
 
+<!-- ================================
+     CONTACT SECTION
+     ================================ -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header" data-aos="fade-up">
+      <span class="section-tag">// contact</span>
+      <h2 class="section-title">Let's Connect & <span>Build Together</span></h2>
+      <div class="section-line"></div>
+      <p class="section-desc">
+        Whether you have an idea, a question, or just want to talk tech — 
+        the conversation starts here. No formalities, just real connection.
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="contact-grid">
+
+      <!-- LEFT — Text + Cards -->
+      <div class="contact-left" data-aos="fade-right" data-aos-delay="100">
+
+        <!-- Journey Text -->
+        <div class="contact-journey">
+          <p>
+            Currently learning MERN, PERN, AI workflows, and modern digital systems through real projects and continuous exploration.
+          </p>
+          <p>
+            More ideas and projects are always in progress. Feel free to connect, collaborate, or share something interesting along the way.
+          </p>
+        </div>
+
+        <!-- Feedback Line -->
+        <div class="contact-feedback">
+          <i class="fas fa-lightbulb"></i>
+          <span>
+            Suggestions, feedback, and creative ideas are always welcome.
+          </span>
+        </div>
+
+        <!-- Contact Cards -->
+        <div class="contact-cards">
+
+          <!-- WhatsApp -->
+          <a href="https://wa.me/639300912130" 
+             target="_blank" 
+             class="contact-card whatsapp-card"
+             data-aos="fade-up" data-aos-delay="150">
+            <div class="contact-card-icon">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">WhatsApp</span>
+              <span class="contact-card-value">+63 9300912130</span>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/anuragsr.dev" 
+             target="_blank" 
+             class="contact-card instagram-card"
+             data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-card-icon">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Instagram</span>
+              <span class="contact-card-value">@anuragsr.dev</span>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+
+          <!-- Email -->
+          <a href="mailto:anuragsrivastava.tech@gmail.com" 
+             class="contact-card email-card"
+             data-aos="fade-up" data-aos-delay="250">
+            <div class="contact-card-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-card-info">
+              <span class="contact-card-label">Email</span>
+              <span class="contact-card-value">anuragsrivastava.tech@gmail.com</span>
+            </div>
+            <i class="fas fa-arrow-right contact-card-arrow"></i>
+          </a>
+
+        </div>
+
+        <!-- Status Line -->
+        <div class="contact-status">
+          <span class="status-pulse-dot"></span>
+          <span class="status-text">
+            Currently active — response time usually within 24 hours.
+          </span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT — Message Form -->
+      <div class="contact-right" data-aos="fade-left" data-aos-delay="150">
+
+        <div class="contact-form-card">
+
+          <!-- Form Header -->
+          <div class="form-header">
+            <div class="form-header-icon">
+              <i class="fas fa-terminal"></i>
+            </div>
+            <div>
+              <h3 class="form-title">Start a Conversation</h3>
+              <p class="form-subtitle">
+                No forms. No bots. Just a direct message.
+              </p>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="contact-form" id="contactForm">
+
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fas fa-user"></i> Your Name
+              </label>
+              <input 
+                type="text" 
+                id="contactName"
+                class="form-input" 
+                placeholder="What should I call you?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">
+                <i class="fas fa-comment-dots"></i> Your Message
+              </label>
+              <textarea 
+                id="contactMessage"
+                class="form-textarea" 
+                placeholder="What's on your mind? An idea, a question, a collab — anything goes."
+                rows="5"
+              ></textarea>
+            </div>
+
+            <!-- Send Button -->
+            <button class="form-send-btn" onclick="sendMessage()">
+              <span id="sendBtnText">Send Message</span>
+              <i class="fas fa-paper-plane" id="sendBtnIcon"></i>
+            </button>
+
+            <!-- Success / Error -->
+            <div class="form-feedback" id="formFeedback"></div>
+
+          </div>
+
+          <!-- Footer Line -->
+          <p class="form-footer-line">
+            <i class="fas fa-code"></i>
+            Built in public. Growing in progress. Always shipping.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- contact-grid end -->
+
+  </div>
+</section>
   <!-- AOS Library -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
