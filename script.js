@@ -157,7 +157,7 @@ const modalError = document.getElementById('modalError');
 const accessCodeInput = document.getElementById('accessCodeInput');
 
 // Backend URL — Deploy hone ke baad replace karna
-const BACKEND_URL = "http://localhost:3000";
+const BACKEND_URL = "https://portfolio-backend-3ad3.onrender.com";
 
 function openPasswordModal() {
   passwordModal.classList.add('active');
